@@ -18,7 +18,7 @@ function App() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 5;
     contextRef.current = ctx;
-  },[])
+  },[]);
 
   const startDrawing = ({nativeEvent}) => {
     const {offsetX, offsetY} = nativeEvent;
@@ -44,9 +44,8 @@ function App() {
       onMouseUp={endDrawing}
       onMouseMove={draw}
       ref={canvasRef}
-    >
-    </canvas>
-  )
-}
+    ></canvas>
+  );
+};
 
 export default App;
