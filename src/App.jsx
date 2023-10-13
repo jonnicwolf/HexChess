@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 function App() {
   const canvasRef = useRef(null);
@@ -39,7 +40,7 @@ function App() {
     contextRef.current.stroke();
   }
   return (
-    <>
+    <Container>
       <h1>Draw anything you want!</h1>
       <canvas
         onMouseDown={startDrawing}
@@ -47,8 +48,14 @@ function App() {
         onMouseMove={draw}
         ref={canvasRef}
       ></canvas>
-    </>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+`;
 
 export default App;
