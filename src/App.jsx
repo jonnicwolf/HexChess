@@ -39,12 +39,15 @@ function App() {
     contextRef.current.stroke();
   }
   return (
-    <canvas
-      onMouseDown={startDrawing}
-      onMouseUp={endDrawing}
-      onMouseMove={draw}
-      ref={canvasRef}
-    ></canvas>
+    <>
+      <h1>Draw anything you want!</h1>
+      <canvas
+        onMouseDown={startDrawing}
+        onMouseUp={endDrawing}
+        onMouseMove={draw}
+        ref={canvasRef}
+      ></canvas>
+    </>
   );
 }
 
